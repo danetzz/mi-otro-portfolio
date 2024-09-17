@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleform.css">
+    <title>Zaitoons- Iniciar Sesión</title>
+    
+  
+</head>
+
+
+<body>
+    <div id="logoInicio">
+        <br>
+        <br>
+        <img src="imgs/logo1.svg">
+    </div>
+    
+    <form onsubmit="validarFormulario(event)">
+        <h2>Iniciar Sesión</h2>
+        <br>
+        <label for="usuario">Usuario:</label>
+        
+        <input type="text" id="usuario" name="usuario" maxlength="30" required><br><br>
+        
+        
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" minlength="6" required><br>
+       
+        <a href="/forgot-password" id="linkOlvideContra">Olvidé mi contraseña</a>
+                <br>
+                <br>
+        
+        <label>
+            <input type="checkbox" id="aceptar" name="aceptar">
+            Acepto los términos y condiciones
+        </label><br><br>
+
+        <br>
+        <br>
+        <input type="submit" value="Iniciar Sesión" required>
+        <br>
+        <br>
+        <p> ¿No tienes una cuenta? <a href="registro.html" id="linkRegistro">Regístrate</a></p>
+    </form>
+
+
+<script src="script.js"></script>
+</body>
+</html>
