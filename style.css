@@ -69,8 +69,6 @@ body {
     100% { transform: rotate(360deg); }
 }
 
-
-
 /* ESTILOS PAGINA HOME */
 /* Estilo del PreNav */
 #prenav {
@@ -667,7 +665,7 @@ border: 0.3px solid #ccc;
 border-radius: 8px;
 padding: 10px;
 width: 20%;  
-height: 40%;
+height: 44%;
 box-sizing: border-box;
 text-align: center;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -676,7 +674,7 @@ margin-top: 25px;
 
 .cartasProductos img {
 width: 100%;
-height: 55%;
+height: 30%;
 }
 
 .cartasProductos h3 {
@@ -719,30 +717,6 @@ font-size: 70%;
         }
 
 
-@media (max-width: 645px) {
-.cartasProductos {
-height: 60%;
-}
-.cartasProductos img{
-width: 100%;
-height: 80%;
-}
-.cartasProductos p {
-display: none;
-}
-.cartasProductos .stock {
-display: none;
-}
-}
-@media (max-width: 480px) {
-.cartasProductos h3 {
-display: none;
-}
-.cartasProductos img{
-width: 100%;
-height: 100%;
-}
-}
 
 
 /* ESTILO PAGINA PRODUCTOS- COMICS */
@@ -763,22 +737,7 @@ height: 100%;
     max-width: 1200px;
     }
     
-    .cartasProductos {
-    border: 0.3px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    width: 20%;  
-    height: 40%;
-    box-sizing: border-box;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    margin-top: 25px;
-    }
     
-    .cartasProductos img {
-    width: 100%;
-    height: 55%;
-    }
     
     .cartasProductos h3 {
     margin: 0 0;
@@ -818,33 +777,6 @@ height: 100%;
             color: #FFF7F7;
           
             }
-    
-    
-    @media (max-width: 645px) {
-    .cartasProductos {
-    height: 60%;
-    }
-    .cartasProductos img{
-    width: 100%;
-    height: 80%;
-    }
-    .cartasProductos p {
-    display: none;
-    }
-    .cartasProductos .stock {
-    display: none;
-    }
-    }
-    @media (max-width: 480px) {
-    .cartasProductos h3 {
-    display: none;
-    }
-    .cartasProductos img{
-    width: 100%;
-    height: 100%;
-    }
-    }
-
 
 
 /*ESTILO CONTENEDOR 5 (SECCION "PROYECTOSJUEGOS")*/
@@ -1321,8 +1253,10 @@ footer #contenido {
 }
 
 footer #contenido #logopagina, #columnaAyuda, #columnaContacto{
-    margin-top: 30px;
+    margin-top: 10%;
+    
   }
+
 footer #contenido ul li{
     padding-bottom: 5%;
   }
@@ -1424,9 +1358,10 @@ footer #contenido ul li{
    margin-bottom: 20px;
 }
 
-   
+
 }
-   
+
+
     
 
 
@@ -1468,6 +1403,41 @@ footer #contenido ul li{
         width: 520px;
        
     }
+
+    /*Pagina de JSON- Productos*/
+
+#productosContainer, #comicsContainer{
+    flex-direction: column;
+}
+.cartasProductos {
+width: 40%;
+height: 10%;
+margin: auto;
+margin-top: 30px;
+}
+.cartasProductos img{
+width: 100%;
+height: 60%;
+}
+
+.cartasProductos h3{
+    font-size: 18px;
+    margin-top: 20px;
+    }
+.cartasProductos p {
+display: none;
+}
+.cartasProductos .stock {
+display: none;
+}
+
+.cartasProductos .boton{
+    width: 60%;
+    height: 14%;
+    padding: 2%;
+    font-size: 16px;
+    margin-top: 10px;
+}
  
 
 
@@ -1479,6 +1449,9 @@ footer #contenido ul li{
     #prenav #logopagina{
             margin-left: 25% ;
     }
+        
+           
+        
 }
 
 @media (max-width: 570px) {
@@ -1575,6 +1548,26 @@ footer #contenido ul li{
 }
 
 
+@media (max-width: 480px) {
+     /*Pagina de JSON- Productos*/
+
+.cartasProductos h3{
+    font-size: 14px;
+    margin-top: 20px;
+    }
+
+.cartasProductos .boton{
+    width: 60%;
+    height: 14%;
+    padding: 2%;
+    font-size: 13px;
+    margin-top: 10px;
+}
+       
+    }
+       
+
+
 
 @media (max-width: 360px) {
 
@@ -1619,6 +1612,16 @@ footer #contenido ul li{
     }
 
 
+}
+
+@media (max-width: 260px) {
+
+    .cartasProductos h3, .cartasProductos .boton{
+        display:none
+        }
+    
+   
+    
 }
 
 
