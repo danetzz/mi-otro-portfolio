@@ -359,6 +359,32 @@ section:nth-child(even) {
     transition: opacity 1s ease-in-out; /*FADE IN DE ENTRADA*/
 }
 
+
+#contenedor2 #titulos h3{
+    position: relative;
+      display: inline-block;
+      padding: 10px; /* Espacio alrededor del texto */
+      overflow: hidden; /* Asegura que la animación no se salga del contenedor */
+  }
+
+  #contenedor2 #titulos h3:before{
+    content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #A97280; /* Color sólido para la animación */
+      transition: left 0.6s ease; /* Duración de la animación */
+      z-index: -1; /* Coloca el pseudo-elemento detrás del texto */
+
+  }
+
+  #contenedor2 #titulos h3:hover:before{
+    left: 100%;
+    
+}
+
 /*FADE IN DE ENTRADA*/
 
 #contenedor2 #textos.visible {
@@ -481,6 +507,7 @@ section:nth-child(odd) {
 section:nth-child(even) {
     background-color: #e0e0e0;
 }
+
 
 /*TERMINA FADE IN DE ENTRADA*/
 
@@ -1004,7 +1031,9 @@ font-size: 70%;
 
       .animated-title:hover::before {
           left: 100%;
+          
       }
+
 
 
 
@@ -1267,8 +1296,12 @@ footer #contenido ul li{
 
 
 @media (max-width: 1000px) {
-    #main-nav {
+
+    #navPlaceholder{
         display: none;
+    }
+    #main-nav {
+        
         flex-direction: column;
         width: 100%;
         background-color: #FFF7F7;
@@ -1438,6 +1471,12 @@ display: none;
     font-size: 16px;
     margin-top: 10px;
 }
+
+/*Mensaje enviado*/
+
+.thank-you-container{
+    width: 70%;
+}
  
 
 
@@ -1522,6 +1561,57 @@ display: none;
     height: 70%;
 }
 
+/*Seccion carrito*/
+
+.cart-message{
+    width: 80%;
+}
+
+/*Seccion Mi cuenta*/
+
+.user-profile{
+    width: 70%;
+    height: 70%;
+}
+
+.user-profile .profile-header, .user-profile .buttons{
+    flex-direction: column;
+}
+
+.user-profile .buttons a{
+    margin: auto;
+    width: 40%;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.user-profile .purchase-history{
+    margin: auto;
+    text-align: center;
+    
+}
+
+/*Formulario de contacto*/
+
+#formularioContacto{
+    width: 60%;
+}
+
+/*Footer redes*/
+
+footer #redes {
+    margin-left: 10%;
+}
+
+/*Mensaje Enviado*/
+.thank-you-container h2{
+    font-size: 24px;
+}
+.thank-you-container p{
+    font-size: 18px;
+}
+
 
 
 }
@@ -1540,15 +1630,21 @@ display: none;
     }
 }
 
-@media (max-width: 490px) {
-    #prenav #micuenta{
-        margin-left: 16%;
-    }
-
-}
 
 
 @media (max-width: 480px) {
+
+    #prenav #logopagina{
+        margin-left: 33% ;
+}
+#prenav #buscador{
+    margin-left: 14% ;
+}
+
+#prenav #micuenta, #prenav #carrito{
+    display: none;
+
+}
      /*Pagina de JSON- Productos*/
 
 .cartasProductos h3{
@@ -1563,6 +1659,32 @@ display: none;
     font-size: 13px;
     margin-top: 10px;
 }
+
+.user-profile .buttons a{
+    width: 60%;
+}
+
+.user-profile .profile-header h2{
+    font-size: 18px;
+}
+.user-profile .profile-header p{
+    font-size: 12px;
+}
+.user-profile .purchase-history h5{
+    font-size: 15px;
+}
+.user-profile .purchase-history li{
+    font-size: 12px;
+}
+
+/*FormularioContacto*/
+
+#formularioContacto h2{
+    font-size: 18px;
+}
+#formularioContacto label{
+    font-size: 14px;
+}
        
     }
        
@@ -1570,6 +1692,10 @@ display: none;
 
 
 @media (max-width: 360px) {
+
+    #prenav #logopagina{
+        margin-left: 25% ;
+}
 
     #contenedor2 {
         flex-direction: column;
@@ -1623,6 +1749,11 @@ display: none;
    
     
 }
+
+
+
+
+
 
 
 
