@@ -66,7 +66,46 @@ document.addEventListener('DOMContentLoaded', function() {
             })
 
 
+// MENSAJE COOKIES
 
+document.addEventListener('DOMContentLoaded', () => {
+    const mensajeCookies = document.getElementById('mensajeCookies');
+    const aceptarCookiesBtn = document.getElementById('aceptarCookies');
+    let cookiesAceptadas = false;
+            
+        function mostrarMensajeCookies() {
+            if (!cookiesAceptadas) {
+                 mensajeCookies.style.display = 'block';
+                        // Bloquear el scroll
+                        document.body.style.overflow = 'hidden';
+            }
+        }
+            
+        function aceptarCookies() {
+            cookiesAceptadas = true;
+            mensajeCookies.style.display = 'none';
+            // Permitir el scroll de nuevo
+            document.body.style.overflow = '';
+        }
+            
+        window.addEventListener('scroll', () => {
+            // Obtener la altura total del documento
+            const alturaTotal = document.documentElement.scrollHeight;
+            // Obtener la altura de la ventana del navegador
+            const alturaVentana = window.innerHeight;
+            // Obtener la distancia desde el top del scroll
+            const distanciaScroll = window.scrollY;
+            
+            // Si el usuario ha scrolleado más allá de la mitad de la página
+            if (distanciaScroll + alturaVentana >= alturaTotal / 2) {
+                mostrarMensajeCookies();
+            }
+        });
+            
+        aceptarCookiesBtn.addEventListener('click', aceptarCookies);
+    });
+                       
+  
 
 
 // SCRIPT DEL NAV
