@@ -1227,6 +1227,37 @@ footer #contenido{
   }
 
 
+/*ESTILO MENSAJE DE COOKIES*/
+
+.mensaje-cookies {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #FFC3D2;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: none; /* Ocultarlo por defecto */
+}
+
+.mensaje-cookies button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #A97280;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.mensaje-cookies button:hover {
+    background-color: #a06977;
+}
+
+
+
   /*DISEÑO RESPONSIVE, ADAPTACION PARA PANTALLAS*/
 
 
