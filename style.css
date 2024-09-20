@@ -813,6 +813,7 @@ font-size: 70%;
     font-family: 'Times New Roman', Times, serif;
     color: #FFC3D2;
     text-align: center;
+    margin: auto;
 }
 
 #contenedor5 #contenedor5texto{
@@ -829,18 +830,23 @@ font-size: 70%;
 
 }
 
+#contenedor6{
+    height: 410px;
+}
+
 #contenedor6 h3{
     font-size: 38px;
     font-family: 'Times New Roman', Times, serif;
     color: #FFC3D2;
     text-align: center;
+    margin: auto;
 
 }
 /* Estilo reproductor de video*/
 
 .video-container {
     position: relative;
-    width: 800px;
+    width: 80%;
     height: 450px;
     margin: auto; /* Centra el contenedor si es necesario */
     background: #FFF7F7;
@@ -854,15 +860,23 @@ font-size: 70%;
 }
 #contenedor6botones{
     display: flex;
+    margin: auto;
+    gap: 2%;
+    
+    width: 28%;
+    justify-content: center;
+    height: 100px;
+    padding: 10px;
 }
 
 #contenedor6botones #botonDescarga1{
     background-color: #FFC3D2;
     color: white;
-    padding: 8px;
-    padding-left: 4%;
-    padding-right: 4%;
-    margin-left: 34%;
+    height: 50%;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 40%;
+   
 }
 
 #contenedor6botones #botonDescarga1:hover{
@@ -873,10 +887,10 @@ font-size: 70%;
 #contenedor6botones #botonDescarga2{
     background-color: #FFC3D2;
     color: white;
-    padding: 8px;
-    padding-left: 4%;
-    padding-right: 4%;
-    margin-left: 5%;
+    height: 50%;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 40%;
 }
 
 #contenedor6botones #botonDescarga2:hover{
@@ -1227,7 +1241,7 @@ footer #contenido{
   }
 
 
-/*ESTILO MENSAJE DE COOKIES*/
+  /*ESTILO MENSAJE DE COOKIES*/
 
 .mensaje-cookies {
     position: fixed;
@@ -1270,6 +1284,26 @@ footer #contenido{
 }
 
 
+@media (max-width: 1630px) {
+
+   /*Botones de descarga de pagina "Proyectos Juegos"*/ 
+
+#contenedor6botones{
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contenedor6botones #botonDescarga1, #contenedor6botones #botonDescarga2{
+    background-color: #FFC3D2;
+    color: white;
+    height: 70%;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 40%;
+   margin: auto;
+}
+}
+
 @media (max-width: 1080px) {
 
     #contenedor4 {
@@ -1301,6 +1335,10 @@ footer #contenido{
 
 .card-description{
     height: 70%;
+}
+
+#contenedor6botones #botonDescarga1, #contenedor6botones #botonDescarga2{
+   font-weight: 8px;
 }
 
 footer{
@@ -1392,6 +1430,13 @@ footer #contenido ul li{
         
     }
 
+    .video-container {
+        position: relative;
+        width: 80%;
+        height: 380px;
+        
+    }
+
     footer #redes {
         margin: auto;
     }
@@ -1421,6 +1466,13 @@ footer #contenido ul li{
    width: 400px;
    margin-bottom: 20px;
 }
+
+/*Pagina de Proyectos Juegos*/
+
+#contenedor6botones #botonDescarga1, #contenedor6botones #botonDescarga2{
+    width: 60%;
+    font-size: 14px;
+ }
 
 
 }
@@ -1466,6 +1518,19 @@ footer #contenido ul li{
     #contenedor2 #textos{
         width: 520px;
        
+    }
+
+    /*Proyectos Juegos*/
+
+    .video-container {
+        position: relative;
+        width: 80%;
+        height: 300px;
+        
+    }
+
+    #contenedor6{
+        height: 480px;
     }
 
     /*Pagina de JSON- Productos*/
@@ -1592,6 +1657,24 @@ display: none;
     height: 70%;
 }
 
+/*Seccion Proyectos Juegos*/
+
+.video-container {
+    position: relative;
+    width: 80%;
+    height: 250px;
+    
+}
+
+
+#contenedor6botones #botonDescarga1, #contenedor6botones #botonDescarga2{
+    width: 95%;
+ }
+
+ #contenedor6 h3{
+    font-size: 38px;
+ }
+
 /*Seccion carrito*/
 
 .cart-message{
@@ -1708,6 +1791,13 @@ footer #redes {
     font-size: 12px;
 }
 
+/*Proyectos Juegos*/
+
+#contenedor6botones #botonDescarga1, #contenedor6botones #botonDescarga2{
+    width: 100%;
+    
+ }
+
 /*FormularioContacto*/
 
 #formularioContacto h2{
@@ -1715,6 +1805,13 @@ footer #redes {
 }
 #formularioContacto label{
     font-size: 14px;
+}
+
+.video-container {
+    position: relative;
+    width: 80%;
+    height: 180px;
+    
 }
        
     }
@@ -1780,6 +1877,7 @@ footer #redes {
    
     
 }
+
 
 
 
