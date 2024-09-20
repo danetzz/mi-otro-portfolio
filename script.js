@@ -447,6 +447,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// HAMBURGUESA
+
+
+function abrirHamburguesa() {
+    const mainNav = document.getElementById('main-nav');
+    if (mainNav.style.display === 'none' || mainNav.style.display === '') {
+        mainNav.style.display = 'block'; // Mostrar el div
+    } else {
+        mainNav.style.display = 'none'; // Ocultar el div
+    }
+
+
+
+
+}
+
+
  
 
 
