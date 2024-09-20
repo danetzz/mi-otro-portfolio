@@ -1366,7 +1366,7 @@ footer #contenido ul li{
 
 @media (max-width: 1000px) {
 
-    #navPlaceholder{
+    #main-nav{
         display: none;
     }
     #main-nav {
