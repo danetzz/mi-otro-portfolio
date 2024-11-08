@@ -12,7 +12,7 @@
       "precio": 8000,
       "stock": 8,
       "saga": "Spell My Name",
-      "imagen": "imgs/portadacomic2.jpg",
+      "imagen": "imgs/portadacomic2.JPG",
       "boton": "Añadir al Carrito"
     },
     {
@@ -20,7 +20,7 @@
       "precio": 8000,
       "stock": 7,
       "saga": "Lucky7!",
-      "imagen": "imgs/portadacomic3.jpg",
+      "imagen": "imgs/portadacomic3.JPG",
       "boton": "Añadir al Carrito"
     },
     {
@@ -28,7 +28,7 @@
       "precio": 8000,
       "stock": 4,
       "saga": "Lucky7!",
-      "imagen": "imgs/portadacomic4.jpg",
+      "imagen": "imgs/portadacomic4.JPG",
       "boton": "Añadir al Carrito"
     },
     {
@@ -36,7 +36,7 @@
       "precio": 8000,
       "stock": 2,
       "saga": "TWSM",
-      "imagen": "imgs/portadacomic5.jpg",
+      "imagen": "imgs/portadacomic5.JPG",
       "boton": "Añadir al Carrito"
     },
     {
@@ -44,7 +44,7 @@
       "precio": 8000,
       "stock": 5,
       "saga": "TWSM",
-      "imagen": "imgs/portadacomic6.jpg",
+      "imagen": "imgs/portadacomic6.JPG",
       "boton": "Añadir al Carrito"
     }
     
