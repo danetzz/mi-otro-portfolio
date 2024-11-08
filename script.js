@@ -409,42 +409,61 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// SCRIPT DE FORMULARIO DE CONTACTO (VALIDACION DE FORMULARIO)
-
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        const form = event.target;
-        if (form.checkValidity()) {
-            // Prevent default form submission
-            event.preventDefault();
-            
-            // Redirect to index.html
-            window.location.href = 'mensajeEnviado.html';
-        } else {
-            alert('Por favor, complete todos los campos obligatorios.');
-        }
-    });
-
-// SCRIPT PARA APARECER/ DESAPARECER MENU HAMBURGUESA (RESPONSIVE)
-// script.js
+/* SCRIPT DE FORMULARIO DE CONTACTO (VALIDACION DE FORMULARIO+ API Y MAGIC LOOPS)*/
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Selección de elementos
-    const menuToggle = document.getElementById('menu-toggle');
-    const mainNav = document.getElementById('main-nav');
-
+// Función que envía el correo usando la API
+function enviarMail(email, nombre, apellido, mensaje) {
+    // Codificar los valores para la URL
+    const emailEncoded = encodeURIComponent(email);
+    const nombreEncoded = encodeURIComponent(nombre);
+    const apellidoEncoded = encodeURIComponent(apellido);
+    const mensajeEncoded = encodeURIComponent(mensaje);
     
-
-    // Adición del evento click si ambos elementos están disponibles
-    if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', () => {
-            console.log('Menu toggle clickeado.'); // Mensaje para verificar que el clic está siendo registrado
-            mainNav.classList.toggle('active');
-            console.log('Clase "active" cambiada en main-nav.');
-            body.style.backgroundcolor= "black";
+    // URL de la API con los parámetros codificados
+    const url = `https://magicloops.dev/api/loop/run/c92fb25f-07a1-4346-aed5-353e44f6290d?email=${emailEncoded}&nombre=${nombreEncoded}&apellido=${apellidoEncoded}&mensaje=${mensajeEncoded}`;
+   
+    // Enviar la solicitud a la API
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error en la solicitud: ' + response.status);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Respuesta del servidor:', data); // Respuesta esperada
+            window.location.href = "mensajeEnviado.html"; // Redirigir a página de éxito
+        })
+        .catch(error => {
+            console.error('Hubo un error:', error);
+            alert("Hubo un problema al enviar el mensaje. Por favor, intenta nuevamente.");
         });
+}
+
+// Función que se ejecuta cuando se envía el formulario
+function enviarCorreo() {
+    // Obtener los valores de los campos del formulario
+    const email = document.getElementById("email").value;
+    const usuario = document.getElementById("nombreUsuario").value;
+    const apellido = document.getElementById("apellidoUsuario").value;
+    const mensaje = document.getElementById("mensajeUsuario").value;
+
+    // Verificar que todos los campos estén completos
+    if (!email || !usuario || !apellido || !mensaje) {
+        // Si algún campo está vacío, mostrar una alerta y no enviar el formulario
+        alert("Por favor, completa todos los campos.");
+        return false; // Evita el envío del formulario
     }
-});
+
+    // Si todo está completo, enviar el correo
+    console.log("Datos a enviar:", email, usuario, apellido, mensaje);
+    enviarMail(email, usuario, apellido, mensaje);
+
+    // Retornar false para evitar que el formulario se envíe de forma tradicional
+    return false;
+}
+
 
 
 // HAMBURGUESA
